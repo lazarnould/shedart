@@ -6,11 +6,11 @@ Rails.application.routes.draw do
 
   get 'reviews/create'
 
-  resources :bookings, except: [:delete]
+  resources :bookings, except: [:destroy]
 
-  resources :workshops, except: [:delete]
+  resources :workshops, except: [:destroy]
 
-  resources :profiles, except: [:delete, :index]
+  resources :profiles, except: [:destroy, :index]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
