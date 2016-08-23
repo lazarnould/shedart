@@ -6,41 +6,12 @@ Rails.application.routes.draw do
 
   get 'reviews/create'
 
-  get 'bookings/new'
+  resources :bookings, except: [:delete]
 
-  get 'bookings/create'
+  resources :workshops, except: [:delete]
 
-  get 'bookings/edit'
+  resources :profiles, except: [:delete, :index]
 
-  get 'bookings/update'
-
-  get 'bookings/show'
-
-  get 'bookings/index'
-
-  get 'workshops/new'
-
-  get 'workshops/create'
-
-  get 'workshops/edit'
-
-  get 'workshops/update'
-
-  get 'workshops/show'
-
-  get 'workshops/index'
-
-  get 'workshops/delete'
-
-  get 'profiles/new'
-
-  get 'profiles/create'
-
-  get 'profiles/edit'
-
-  get 'profiles/update'
-
-  get 'profiles/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
