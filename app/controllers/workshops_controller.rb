@@ -40,7 +40,7 @@ class WorkshopsController < ApplicationController
   private
 
   def workshop_params
-    params.require(:workshop).permit(:city, :address, :size, :price, :shared)
+    params.require(:workshop).permit(:city, :address, :size, :price, :shared, :description)
   end
 
   def find_workshop

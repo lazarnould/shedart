@@ -1,0 +1,12 @@
+<%= simple_form_for [@workshop] do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :city %>
+  <%= f.input :address %>
+  <%= f.input :size %>
+  <%= f.input :price %>
+  <%= f.input :shared, label: 'Shared Workshop', as: :boolean, checked_value: true, unchecked_value: false %>
+  <%= f.input :description, as: :text %>
+
+  <%= f.button :submit %>
+<% end %>
