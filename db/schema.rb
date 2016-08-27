@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823105047) do
+ActiveRecord::Schema.define(version: 20160827192146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160823105047) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "photo"
+    t.integer  "workshop_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "images", ["workshop_id"], name: "index_images_on_workshop_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
@@ -71,12 +80,15 @@ ActiveRecord::Schema.define(version: 20160823105047) do
     t.integer  "size"
     t.integer  "price"
     t.boolean  "shared"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.string   "description"
+    t.string   "photo"
   end
 
   add_index "workshops", ["user_id"], name: "index_workshops_on_user_id", using: :btree
 
+  add_foreign_key "images", "workshops"
   add_foreign_key "workshops", "users"
 end

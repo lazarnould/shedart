@@ -1,2 +1,32 @@
-<h1>Workshops#edit</h1>
-<p>Find me in app/views/workshops/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="form-container col-sm-6 col-sm-offset-3">
+
+      <div class="text-center">
+        <h3>Create your Workshop</h3>
+      </div>
+
+      <%= render 'workshop_form' %>
+
+    </div>
+    <div class="form-container col-sm-6 col-sm-offset-3">
+
+      <div class="text-center">
+        <h3>Photos</h3>
+        <%@workshop.images.each do |image|%>
+          <%= cl_image_tag image.photo, height: 300, width: 400, crop: :fill %>
+        <%end%>
+      </div>
+
+    </div>
+    <div class="form-container col-sm-6 col-sm-offset-3">
+
+      <div class="text-center">
+        <h3>Add more photos</h3>
+      </div>
+
+      <%=render 'images/image_form'%>
+
+    </div>
+  </div>
+</div>
