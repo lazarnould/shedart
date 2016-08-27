@@ -11,7 +11,7 @@
     </div>
     <div class="form-container col-sm-6 col-sm-offset-3">
 
-      <div class="space-between">
+      <div class="text-center">
         <h3>Photos</h3>
         <%@workshop.images.each do |image|%>
           <%= cl_image_tag image.photo, height: 300, width: 400, crop: :fill %>
