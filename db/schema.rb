@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160827192146) do
+ActiveRecord::Schema.define(version: 20160909140802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,9 +19,14 @@ ActiveRecord::Schema.define(version: 20160827192146) do
   create_table "bookings", force: :cascade do |t|
     t.string   "checkin"
     t.string   "checkout"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+    t.integer  "workshop_id"
   end
+
+  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  add_index "bookings", ["workshop_id"], name: "index_bookings_on_workshop_id", using: :btree
 
   create_table "images", force: :cascade do |t|
     t.string   "photo"
@@ -89,6 +94,8 @@ ActiveRecord::Schema.define(version: 20160827192146) do
 
   add_index "workshops", ["user_id"], name: "index_workshops_on_user_id", using: :btree
 
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "workshops"
   add_foreign_key "images", "workshops"
   add_foreign_key "workshops", "users"
 end
