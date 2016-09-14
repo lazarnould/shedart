@@ -9,7 +9,7 @@ class WorkshopsController < ApplicationController
     @workshop = Workshop.new(workshop_params)
     @workshop.user_id = current_user
     if @workshop.save
-      flash[:success] = "Your workshop in #{@workshop.city} has been created"
+      flash[:success] = "#{@workshop.name} in #{@workshop.city} has been created"
       redirect_to workshop_path(@workshop)
     else
       flash[:alert] = "An error occured, try again"
