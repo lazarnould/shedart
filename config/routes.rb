@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :profiles, except: [:destroy, :index]
 
-  resources :bookings, except: [:destroy]
+  resources :bookings, except: [:destroy, :edit, :update]
 
   resources :workshops, except: [:destroy] do
     resources :images, only: [:new, :create, :edit, :update]
