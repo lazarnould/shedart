@@ -7,7 +7,7 @@ class WorkshopsController < ApplicationController
 
   def create
     @workshop = Workshop.new(workshop_params)
-    @workshop.user_id = current_user
+    @workshop.user = current_user
     if @workshop.save
       flash[:success] = "#{@workshop.name} in #{@workshop.city} has been created"
       redirect_to workshop_path(@workshop)

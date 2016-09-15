@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
-    @profile.user_id = current_user
+    @profile.user = current_user
     if @profile.save
       flash[:success] = "You're profile has been created"
       redirect_to profile_path(@profile)
@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :address, :country, :zip_code, :city, :phone_number, :photo, :photo_cache)
+    params.require(:profile).permit(:first_name, :last_name, :address, :country, :zip_code, :city, :phone_prefix, :phone_number, :photo, :photo_cache)
   end
 
   def find_profile
