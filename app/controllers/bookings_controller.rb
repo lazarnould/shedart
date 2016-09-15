@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
     @booking.workshop = Workshop.find(params[:workshop_id])
     @booking.user = current_user
     if @booking.save
-      flash[:success]= "Your spot in the #{@booking.workshop.name} from #{@booking.checkin} to #{@booking.checkout} has been booked"
+      flash[:success]= "Your application for the spot in the #{@booking.workshop.name} from #{@booking.checkin} to #{@booking.checkout} has been submitted, will come back to you soon"
       redirect_to profile_path(current_user.profile)
     else
       flash[:error] = "An error occured, please try again"
