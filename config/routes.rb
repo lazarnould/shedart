@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :workshops, except: [:destroy] do
     resources :images, only: [:new, :create, :edit, :update]
+
   end
 
   get 'images/destroy'
