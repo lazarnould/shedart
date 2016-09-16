@@ -12,11 +12,24 @@ Rails.application.routes.draw do
 
   resources :workshops, except: [:destroy] do
     resources :images, only: [:new, :create, :edit, :update]
+
   end
 
   get 'images/destroy'
 
   get 'reviews/create'
+
+  get "mailbox/inbox" => "mailbox#inbox", as: :mailbox_inbox
+  get "mailbox/sent" => "mailbox#sent", as: :mailbox_sent
+  get "mailbox/trash" => "mailbox#trash", as: :mailbox_trash
+
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

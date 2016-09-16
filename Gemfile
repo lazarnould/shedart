@@ -20,6 +20,7 @@ gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'cloudinary', '1.1.0'
 gem 'carrierwave'
+gem 'mailboxer'
 
 group :development, :test do
   gem 'binding_of_caller'
