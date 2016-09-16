@@ -36,6 +36,9 @@
                 <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
               <% end %>
             </li>
+
+            <li><%= link_to "Inbox", mailbox_inbox_path %></li>
+
             <li>
               <%= link_to "#" do %>
                 <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
