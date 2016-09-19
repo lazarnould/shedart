@@ -2,10 +2,12 @@ class ConversationsController < ApplicationController
   before_action :authenticate_user!
 
   def new
+    @workshop = Workshop.find(params[:workshop_id])
   end
 
   def create
-    recipients = User.where(id: conversation_params[:recipients])
+    @workshop = Workshop.find(params[:workshop_id])
+    recipients = [current_user, User.find(@workshop.user_id)]
     conversation = current_user.send_message(recipients, conversation_params[:body], conversation_params[:subject]).conversation
     flash[:success] = "Your message was successfully sent!"
     redirect_to conversation_path(conversation)
@@ -36,7 +38,7 @@ class ConversationsController < ApplicationController
   private
 
   def conversation_params
-    params.require(:conversation).permit(:subject, :body,recipients:[])
+    params.require(:conversation).permit(:subject, :body)
   end
 
   def message_params
