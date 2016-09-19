@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :workshops, except: [:destroy] do
     resources :images, only: [:new, :create, :edit, :update]
-
+    resources :conversations, only:[:new, :create]
   end
 
   get 'images/destroy'
