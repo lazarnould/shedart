@@ -9,6 +9,9 @@
   align-items: center;
   justify-content: space-between;
 }
+a.nav-link:link {
+  text-decoration: none;
+}
 
 /* Optional class to fix the navbar on top */
 .navbar-wagon-fixed {
