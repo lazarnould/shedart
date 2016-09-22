@@ -1,14 +1,14 @@
 .banner-home {
   height: 80vh;
   background-size: cover !important;
-  background-position: center;
-  background-image: image-url('banner11.jpg');
+  background-position: center-center;
+  background-image: image-url('banner13.jpg');
 }
 
 .banner-content {
   position: absolute;
-  left: 5vh;
-  top: 25vh;
+  right: 15vh;
+  top: 15vh;
   width: 300px;
   h1 {
     color: #FF00FF;
