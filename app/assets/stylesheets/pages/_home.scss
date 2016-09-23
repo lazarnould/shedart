@@ -22,32 +22,20 @@
     padding-top: 5px;
   }
 }
- .btn-special {
-    background-color: #FF00FF;
-    color: white;
- }
+
+.btn-special {
+  background-color: #FF00FF;
+  color: white;
+  margin-top: 10px;
+  margin-left: 57px;
+  border-radius: 25px;
+}
 
  .banner-icon {
-  fill:white;
-  opacity: 0.8;
+  opacity: 0.9;
  }
 
- .icon1 {
-  background-color: white;
-  opacity: 0.8;
-  -webkit-mask-image: url('airplane-noun.svg');
-  mask-image: url('airplane-noun.svg');
+ .form-banner {
+  margin-left: 20px;
+  margin-top: 10px;
  }
-.icon2 {
-  background-color: white;
-  opacity: 0.8;
-  -webkit-mask-image: url('logo.svg');
-  mask-image: url('logo.svg');
- }
-.icon3 {
-  background-color: white;
-  opacity: 0.8;
-  -webkit-mask-image: url('paintbrush.svg');
-  mask-image: url('paintbrush.svg');
- }
-
