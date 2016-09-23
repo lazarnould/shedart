@@ -1,14 +1,14 @@
 .banner-home {
   height: 80vh;
   background-size: cover !important;
-  background-position: center-center;
-  background-image: image-url('banner13.jpg');
+  background-position: center;
+  background-image: image-url('banner11.jpg');
 }
 
 .banner-content {
   position: absolute;
-  right: 15vh;
-  top: 15vh;
+  left: 15vh;
+  top: 20vh;
   width: 300px;
   h1 {
     color: #FF00FF;
@@ -17,10 +17,37 @@
   };
   p {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: lighter;
-    padding-top: 10px;
+    padding-top: 5px;
   }
 }
+ .btn-special {
+    background-color: #FF00FF;
+    color: white;
+ }
 
+ .banner-icon {
+  fill:white;
+  opacity: 0.8;
+ }
+
+ .icon1 {
+  background-color: white;
+  opacity: 0.8;
+  -webkit-mask-image: url('airplane-noun.svg');
+  mask-image: url('airplane-noun.svg');
+ }
+.icon2 {
+  background-color: white;
+  opacity: 0.8;
+  -webkit-mask-image: url('logo.svg');
+  mask-image: url('logo.svg');
+ }
+.icon3 {
+  background-color: white;
+  opacity: 0.8;
+  -webkit-mask-image: url('paintbrush.svg');
+  mask-image: url('paintbrush.svg');
+ }
 
