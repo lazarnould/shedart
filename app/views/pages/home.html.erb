@@ -1,2 +1,18 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-home" style="">
+  <div class="banner-content">
+    <h1>Travel Inspires</h1>
+    <p >Allow your Inspiration to live abroad, Sub-Rent your Workshop when you travel and Meet other artists.</p>
+    <div class="flex-icons">
+      <%= image_tag('airplane-noun.svg', size: "90x56", class:"banner-icon")%>
+      <%= image_tag('paintbrush-noun.svg', size: "90x56", class:"banner-icon")%>
+      <%= image_tag('moneybag-noun.svg', size: "90x56", class:"banner-icon")%>
+    </div>
+
+    <form class="form-inline">
+      <div class="form-group form-banner">
+        <input type="text" class="form-control" id="exampleInputName2" placeholder="Email">
+      </div>
+      <button type="submit" class="btn btn-special btn-sm text-center">Subscribe Now!</button>
+    </form>
+  </div>
+</div>

@@ -1,4 +1,41 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.banner-home {
+  height: 80vh;
+  background-size: cover !important;
+  background-position: center;
+  background-image: image-url('banner11.jpg');
+}
+
+.banner-content {
+  position: absolute;
+  left: 15vh;
+  top: 20vh;
+  width: 300px;
+  h1 {
+    color: #FF00FF;
+    font-size: 70px;
+    font-weight: bolder;
+  };
+  p {
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+    padding-top: 5px;
+  }
+}
+
+.btn-special {
+  background-color: #FF00FF;
+  color: white;
+  margin-top: 10px;
+  margin-left: 57px;
+  border-radius: 25px;
+}
+
+ .banner-icon {
+  opacity: 0.9;
+ }
+
+ .form-banner {
+  margin-left: 20px;
+  margin-top: 10px;
+ }
