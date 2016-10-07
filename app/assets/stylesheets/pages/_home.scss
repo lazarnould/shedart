@@ -5,11 +5,16 @@
   background-image: image-url('banner11.jpg');
 }
 
+.banner-filter {
+  filter: brightness(0.9);
+}
+
 .banner-content {
   position: absolute;
   left: 15vh;
   top: 20vh;
   width: 300px;
+  filter: brightness(2);
   h1 {
     color: #FF00FF;
     font-size: 70px;
@@ -29,6 +34,11 @@
   margin-top: 10px;
   margin-left: 57px;
   border-radius: 25px;
+}
+
+.btn-special:hover {
+  color: #FF00FF;
+  background-color: white;
 }
 
  .banner-icon {
